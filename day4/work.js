@@ -17,7 +17,7 @@ const tipCaculator = () => {
             tips.push(tip)
             payments.push(pay)
         } else if (x > 200) {
-            const tip = x * 0.2
+            const tip = x * 0.1
             const pay = x + tip
             tips.push(tip)
             payments.push(pay)
