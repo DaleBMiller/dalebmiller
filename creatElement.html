@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <title>Docunment</title>
+        <style>
+            #listBooks{
+                color: red
+                        }
+        </style>
+    </head>
+    <body>
+        <!-- <ul id="listBooks">
+            <li class="book">Java</li>
+            <li class="book">Android</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+        </ul> -->
+        <script>
+            const oFrag = document.createDocumentFragment()
+            const oElement = document.createElement('ul')
+            oElement.setAttribute('id','listBooks')
+            document.body.appendChild(oElement)
+
+
+            const oItem1 = document.createElement('li')
+            oItem1.setAttribute('class','book')
+            oElement.appendChild(oItem1)
+            const oText1 = document.createTextNode('JavaScript')
+            oItem1.appendChild(oText1)
+
+
+            const oItem2 = document.createElement('li')
+            oItem2.setAttribute('class','book')
+            oElement.appendChild(oItem2)
+            const oText2 = document.createTextNode('Python')
+            oItem2.appendChild(oText2)
+
+            const oItem3 = document.createElement('li')
+            oItem3.setAttribute('class','book')
+            oElement.appendChild(oItem3)
+            const oText3 = document.createTextNode('Java')
+            oItem3.appendChild(oText3)
+
+            const oItem4 = document.createElement('li')
+            oItem4.setAttribute('class','book')
+            oElement.appendChild(oItem4)
+            const oText4 = document.createTextNode('Android')
+            oItem4.appendChild(oText4)
+        </script>
+    </body>
+</html>

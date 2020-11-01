@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="books">
+        <li>Java</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>Android</li>
+    </ul>
+    <script>
+        const books = document.querySelector('#books')
+        // books.setAttribute('style','border : 1px solid red')
+        books.style.color = 'red'
+        books.style.backgroundColor = 'blue'
+        books.style.borderStyle = 'dotted'
+        books.style.cssFloat = 'right'
+
+        books.setAttribute('style','border : 1px solid red')
+        console.log(books.style.border)
+    </script>
+</body>
+</html>

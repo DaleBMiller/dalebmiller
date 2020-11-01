@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="books">
+        <li>Java</li>
+        <li>Python</li>
+    </ul>
+    <input type="text" id="bookName">
+    <button id="btnAdd">增加</button>
+    <button id="btnDel">删除</button>
+    <button id="btnBlue">蓝色</button>
+    <button id="btnRed">红色</button>
+
+    <script>
+        const books = document.querySelector('#books')
+        const bookName = document.querySelector('#bookName')
+        const btnAdd = document.querySelector('#btnAdd')
+        const btnDelete = document.querySelector('#btnDel')
+
+        const addBooks = () => {
+            const oElement = document.createElement('li')
+            const oText = document.createTextNode(bookName.value)
+            oElement.appendChild(oText)
+            books.appendChild(oElement)
+            bookName.value = ''
+        }
+
+        const delBooks = () => {
+            if(books.hasChildNodes()){
+                books.removeChild(books.lastElementChild)
+            }
+        }
+
+        const turnBlue = () => {
+            books.lastElementChild.style.color = 'blue'
+        }
+
+        const turnRed = () => {
+            books.lastElementChild.style.color = 'red'
+        }
+
+        btnAdd.addEventListener('click', addBooks)
+        btnDelete.addEventListener('click', delBooks)
+        btnBlue.addEventListener('click',turnBlue)
+        btnRed.addEventListener('click',turnRed)
+    </script>
+</body>
+
+</html>

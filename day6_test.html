@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "utf-8">
+        <meta name="vierport" content="">
+        <title>Docunment</title>
+        <style>
+            #listBooks .book{
+                border: 1px solid red;
+            }
+            #listBooks :nth-child(3){
+                color: red;
+            }
+            #listBooks {
+                background-color: red;
+            }
+            #listBooks1 {
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="listBooks">
+            <li class="book">Java</li>
+            <li class="book">Android</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+        </ul>
+        <script>
+            /*
+            // const oLIst = document.querySelector('#listBooks')
+            // console.log(oLIst.innerHTML)
+            // console.log(oLIst.nodeType)
+            // console.log(oLIst.nodeName)
+            // console.log(oLIst.nodeValue)
+            // console.log(oList.firstChild.nodeType)
+            // console.log(oLIst.firstElementChild.nodeType)
+            // console,log(document.doctype.nextSibling.innerHTML)
+            // console.log(document.documentElement.nodeName)
+            // console.log(document.body.nodeName)
+            // console.log(document.doctype.nextSibling.firstElementChild.nextSibling.innerHTML)
+            // const oList = document.getElementById('listBooks')
+            // const oItem = document.getElementsByTagName('li')
+            // console.log(oItem.length)
+            // const Item2 = document.getElementsByClassName('book')
+            // console.log(Item2.length)
+            // oList.removeChild(oList.lastChild)
+            // console.log(oItem.length)
+            // const oList1 = document.getElementById('listBooks')
+            // const oItem1 = document.querySelector('#listBooks .book')
+            // console.log(oItem1.innerHTML)
+            
+           const oList = document.querySelectorAll('#listBooks .book')
+           console.log(oList.length)
+           document.querySelector('#listBooks .nth-child(3)')
+           oList.removeChild(oList.document.querySelector('#listBooks :nth-child(3)'))
+           console.log(oList.length)
+           */
+          const oList = document.querySelector("#listBooks")
+          console.log(oList.getAttribute('id'))
+          oList.setAttribute('id','listBooks1')
+        </script>
+    </body>
+</html>
