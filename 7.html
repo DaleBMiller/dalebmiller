@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //最简单方法创建元素
+        let strHTML = 
+        `<ul>
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Swift</li>
+        </ul>`
+        document.body.innerHTML = strHTML
+        const oList = document.querySelector('ul')
+        console.log(oList)
+
+
+        //古老的方式创建元素
+        const oFrag = document.createDocumentFragment()
+        let oElement = document.createElement('ul')
+
+        const createElement = (element,text) => {
+            let oItem = document.createElement(element)
+            let oText = document.createTextNode(text)
+            oItem.appendChild(oText)
+            oElement.appendChild(oItem)
+        }
+        createElement('li','Java')
+        createElement('li','JavaScript')
+        createElement('li','Python')
+        createElement('li','Swift')
+        oFrag.appendChild(oElement)
+        document.body.appendChild(oFrag)
+    </script>
+</body>
+</html>

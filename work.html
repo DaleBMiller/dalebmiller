@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>这是静态节点示例1</li>
+        <li>这是静态节点示例2</li>
+        <li>这是静态节点示例3</li>
+    </ul>
+
+    <ul id="DongTai"></ul>
+    <script>
+        //静态节点
+        const oList = document.querySelector('ul')
+        console.log(oList.childElementCount)
+
+        //动态节点
+        const oList2 = document.querySelector('#DongTai')
+        const li1 = document.createElement('li')
+        const li2 = document.createElement('li')
+        const li3 = document.createElement('li')
+
+        li1.append('动态节点1')
+        li2.append('动态节点2')
+        li3.append('动态节点3')
+
+        oList2.append(li1,li2,li3)
+    </script>
+</body>
+</html>

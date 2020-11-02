@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>访问常规元素</title>
+</head>
+<body>
+   <div id="myDiv" class="test1" name="div">
+       <p id="myPata">test</p>
+   </div> 
+   <script>
+       const oDiv = document.getElementById("myDiv")
+       const oDiv1 = document.getElementsByName("div1")
+       const oDiv2 = document.getElementsByTagName("div")
+       const oDiv3 = document.getElementsByClassName("test1")
+       const oDiv4 = document.querySelector("#myDiv")
+       const oDiv5 = document.querySelectorAll("#myDiv")
+       console.log(oDiv,oDiv1,oDiv3,o)
+       console.log(oDiv4,oDiv5)
+       const oPara = oDiv.querySelector("#myPara")
+   </script>
+</body>
+</html>

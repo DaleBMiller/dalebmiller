@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .p1 {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Java</li>
+        <li>JavaScript</li>
+    </ul>
+    <input type="text" id="txtItem">
+    <button id="btnAdd">添加</button>
+    <button id="btnDel">删除</button>
+    <script>
+        const oList = document.querySelector('ul')
+
+        document.querySelector('#btnAdd').addEventListener('click',() => {
+            let strItem= document.querySelector('#txtItem').value
+            let oE = document.createElement('li')
+            oE.textContent = strItem
+            oList.appendChild(oE)
+            document.querySelector('#txtItem').value = ''
+            if(oList.childElementCount > 0) {
+               document.querySelector('#btnDel').classList.remove('p1')
+            }
+        })
+        document.querySelector('#btnDel').addEventListener('click',() => {
+            oList.removeChild(oList.lastElementChild)
+            if(oList.childElementCount == 0){
+                document.querySelector('#btnDel').classList.toggle('p1')
+            }
+        })
+    </script>
+</body>
+</html>
