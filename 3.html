@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">test</div>
+    <script>
+        const box = document.querySelector('#box')
+        const callback = (e) =>{
+            console.log(e)
+            for(let prop in e){
+                console.log(prop)
+            }
+        }
+        box.addEventListener('click',callback)
+
+
+        //创建一个自定义事件
+        const helloEvent = new Event('hello',{bubbles:true,cancelable:false})
+
+        const helleCallBack = (event) => {
+            box.textContent = 'hello,event'
+        }
+        box.addEventListener('hello',helleCallBack)
+
+        document.body.addEventListener('hello',() => {
+            console.log('hello')
+        })
+
+        box.dispatchEvent(helloEvent)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <p id="para">test</p>
+    </div>
+
+    <a id="link" href="https://www.microssoft.com">导航到微软官网</a>
+    <input type="text" id="txtName">
+
+    <script>
+        const box = document.querySelector('#box')
+        const para = document.querySelector('#para')
+        const link = document.querySelector('#link')
+        const txtNmae = document.querySelector('#txtName')
+
+        const callback = (e) => {
+            console.log(`标记名: ${e.currentTarget.tagName},传播阶段: ${e.eventPhase}`)
+        }
+
+        box.addEventListener('click', callback,true)
+        para.addEventListener('click',callback,true)
+        box.addEventListener('click',callback,false)
+        para.addEventListener('click',callback,false)
+
+        link.addEventListener('click',(e) => {
+            if(e.cancelBubble){
+                e.preventDefault()
+            }
+            console.log(e.defaultPrevented)
+            console.log("You click link")
+        })
+
+        txtNmae.addEventListener('qwe',(e) => {
+            if(e.charCode < 97 || e.charCode > 122){
+                e.preventDefault()
+            }
+        })
+
+
+
+    </script>
+</body>
+</html>

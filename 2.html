@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="vbox">test</div>
+    <script>
+        //事件传播机制
+        const box = document.querySelector('#vbox')
+        window.addEventListener('click',() =>{
+            console.log('window捕获阶段')
+        },true)
+
+        document.addEventListener('click',() =>{
+            console.log('document捕获阶段')
+        },true)
+
+        document.documentElement.addEventListener('click',() =>{
+            console.log('html捕获阶段')
+        },true)
+
+        document.body.addEventListener('click',() =>{
+            console.log('body捕获阶段')
+        },true)
+
+        box.addEventListener('click',() =>{
+            console.log('box捕获阶段')
+        },true)
+
+
+
+        window.addEventListener('click',() =>{
+            console.log('window冒泡阶段')
+        })
+
+        document.addEventListener('click',() =>{
+            console.log('document冒泡阶段')
+        })
+
+        document.documentElement.addEventListener('click',() =>{
+            console.log('html冒泡阶段')
+        })
+
+        document.body.addEventListener('click',() =>{
+            console.log('body冒泡阶段')
+        })
+
+        box.addEventListener('click',() =>{
+            console.log('box冒泡阶段')
+        })
+    </script>
+</body>
+</html>

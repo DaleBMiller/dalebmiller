@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <button id="myButton">点击我</button>
+    </div>
+
+    <script>
+        const box = document.querySelector('#box')
+        const myButton = document.querySelector('#myButton')
+
+        box.addEventListener('click',(e) => {
+            console.log(e.isTrusted)
+            console.log(`event.type: ${event.type}`)
+            console.log(`event.target: ${event.target.tagName}`)
+            console.log(`event.currentTarget: ${event.currentTarget}`)
+        })
+
+        let handler = (event) => {
+            switch (event.type) {
+                case "click":
+                    console.log('Clicked');
+                    break;
+                case "mouseover":
+                    event.target.style.backgroundColor = 'red';
+                    break;
+                case "mouseout":
+                    event.target.backgroundColor = '';
+                    break;
+            }
+        }
+
+        myButton.onclick = handler;
+        myButton.onmouseover = handler;
+        myButton.onmouseout = handler;
+    </script>
+</body>
+</html>
