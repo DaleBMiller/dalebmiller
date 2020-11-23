@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            visibility: hidden;
+            background-color: gray;
+            position:absolute;
+            list-style-type: none;
+        }
+
+        #myDiv {
+            border: 1px solid black;
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    </div>
+    <ul id="menu">
+        <li>Python</li>
+        <li>Java</li>
+        <li>JS</li>
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+    <script>
+        window.addEventListener('load',(e)=>{
+            const oDiv = document.querySelector('#myDiv');
+
+            oDiv.addEventListener('contextmenu',(e) =>{
+                e.preventDefault();
+                
+                const menu = document.querySelector('#menu')
+
+                menu.style.left = e.clientX + 'px'
+                menu.style.top = e.clientY + 'px'
+                menu.style.visibility = 'visible'
+            });
+
+            document.addEventListener('click',(e)=>{
+                document.querySelector('#menu').style.visibility = 'hidden'
+            })
+        })
+
+        window.addEventListener('beforeunload',(e)=> {
+            e.preventDefault();
+            alert('真的要退出吗？');
+        })
+    </script>
+
+</body>
+</html>

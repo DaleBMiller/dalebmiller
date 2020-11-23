@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>事件委托示例</title>
+</head>
+
+<body>
+<style>
+    .box {
+        width: 200px;
+        background-color: coral;
+    }
+</style>
+<ul id="list">
+    <li>Java</li>
+    <li>JavaScript</li>
+    <li>Python</li>
+    <li>Swift</li>
+</ul>
+<input type="text" id='txtCourse' />
+<button id='btnAdd'>+</button>
+<button id='btnDel'>-</button>
+<script>
+    const oList = document.querySelector('#list')
+    const oCourse = document.querySelector('#txtCourse')
+
+    oList.addEventListener('mouseover', (event) => {
+        event.target.classList.add('box')
+    })
+
+    oList.addEventListener('mouseout', (event) => {
+        event.target.classList.remove('box')
+    })
+
+    document.querySelector('#btnAdd').addEventListener('click', (event) => {
+        let strCourse = oCourse.value
+        if (strCourse.length > 0) {
+            let oItem = document.createElement('li')
+            oItem.textContent = strCourse
+            oList.append(oItem)
+            oCourse.value = ''
+        }
+    })
+
+    document.querySelector('#btnDel').addEventListener('click', () => {
+        if (oList.childElementCount > 0) {
+            oList.lastElementChild.remove()
+        }
+    })
+</script>
+</body>
+
+</html>

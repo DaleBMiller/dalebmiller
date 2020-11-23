@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>焦点事件示例</title>
+    <style>
+        .bgc {
+            background-color:cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <input type="text" />
+    </form>
+    <script>
+        const oInput = document.querySelector('input')
+        oInput.addEventListener('focusin', (e)=> {
+            oInput.classList.add('bgc')
+        })
+
+        oInput.addEventListener('focusout', (e) =>{
+            oInput.classList.remove('bgc')
+        })
+    </script>
+</body>
+</html>

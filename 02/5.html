@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>鼠标事件示例</title>
+    <style>
+        div {
+            width:50px;
+            height:50px;
+            background-color:gray;
+        }
+    </style>
+</head>
+<body>
+    <div>test</div>
+    <script>
+        const oDiv = document.querySelector('div')
+
+        oDiv.addEventListener('click',()=>{
+            console.log(`-->click`)
+        })
+
+        oDiv.addEventListener('dblclick',()=>{
+            console.log(`-->dblclick`)
+        })
+        
+        oDiv.addEventListener('mousedown',()=>{
+            console.log(`-->mousedown`)
+        })
+
+        oDiv.addEventListener('mouseup',()=>{
+            console.log(`-->mouseup`)
+        })
+
+        // mouseover/mouseout/mouseenter/mouseleave
+    </script>
+</body>
+</html>

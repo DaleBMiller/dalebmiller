@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>上下文菜单</title>
+</head>
+
+<body>
+    <div id="myDiv">在这里右键单击或者按 Ctrl+click 会出现一个自定义的上下文菜单。
+        点其他地方就是默认的上下文菜单。
+    </div>
+    <ul id="myMenu" style="position:absolute;visibility:hidden;background-color:
+        silver">
+        <li><a href="http://www.somewhere.com"> somewhere</a></li>
+        <li><a href="http://www.wrox.com">Wrox site</a></li>
+        <li><a href="http://www.somewhere-else.com">somewhere-else</a></li>
+    </ul>
+    <script>
+        window.addEventListener("load", (event) => {
+            let div = document.getElementById("myDiv");
+
+            div.addEventListener("contextmenu", (event) => {
+                event.preventDefault();
+
+                let menu = document.getElementById("myMenu");
+                menu.style.left = event.clientX + "px";
+                menu.style.top = event.clientY + "px";
+                menu.style.visibility = "visible";
+            });
+
+            document.addEventListener("click", (event) => {
+                document.getElementById("myMenu").style.visibility = "hidden";
+            });
+        });
+    </script>
+</body>
+
+</html>

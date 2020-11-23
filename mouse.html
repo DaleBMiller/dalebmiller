@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: gray;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        test
+    </div>
+    <script>
+        const oDiv = document.querySelector('div')
+
+        oDiv.addEventListener('mouseup',() => {
+            console.log('mouseup')
+        })
+        oDiv.addEventListener('mouseover',() => {
+            console.log('mouseover')
+        })
+        oDiv.addEventListener('mousedown',() => {
+            console.log('mousedown')
+        })
+        oDiv.addEventListener('mouseout',() => {
+            console.log('mouseout')
+        })
+        oDiv.addEventListener('click',() => {
+            console.log('click')
+        })
+        oDiv.addEventListener('dblclick',() => {
+            console.log('dblclick')
+        })
+        oDiv.addEventListener('mouseenter',() => {
+            console.log('mouseenter')
+        })
+        oDiv.addEventListener('mouseleave',() => {
+            console.log('mouseleave')
+        })
+        oDiv.addEventListener('mousemove',() => {
+            console.log('mousemove')
+        })
+    </script>
+</body>
+</html>

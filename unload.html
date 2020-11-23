@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="1.html">Click me</a>
+    <script>
+        window.addEventListener('load',() => {
+            alert('页面在加载');
+        });
+
+        window.addEventListener('resize',(e) => {
+            console.log(`${e.target}`);
+        })
+    </script>
+</body>
+</html>

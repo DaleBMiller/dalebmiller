@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height:100px;
+            padding: 20px;
+            background-color: gray;
+        }
+
+        p {
+            width:50px;
+            height: 50px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>test</p>
+    </div>
+    <script>
+        const oPara = document.querySelector('p')
+
+        oPara.addEventListener('mouseover',(e)=>{
+            console.log(e.relatedTarget)
+        })
+        oPara.addEventListener('click',(e)=> {
+            console.log(e.detail)
+        })
+
+        oPara.addEventListener('mouseout', (e) => {
+            console.log(e.relatedTarget)
+        })
+    </script>
+</body>
+</html>

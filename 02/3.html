@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>图片加载</title>
+</head>
+<body>
+    <img src="../../img/code1111.png" alt="Logo" />
+    <a href="2.html">dianwo</a>
+    <script>
+
+        window.addEventListener('load', (e) => {
+            alert('test')
+        })
+
+        const oImage = document.querySelector('img')
+
+        oImage.addEventListener('load',(e) => {
+            alert('图片加载之前弹出')
+        })
+
+        oImage.addEventListener('error',(e)=>{
+            alert('大哥，图片不存在啊！')
+        })
+
+        window.addEventListener('unload',(e)=>{
+            alert('unload')
+        })
+    </script>
+
+</body>
+</html>

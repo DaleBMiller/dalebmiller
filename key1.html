@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+
+        <input type="text" id="txtUserName" />
+    </form>
+    <script>
+        const oUserName = document.querySelector('#txtUserName')
+        
+        // oUserName.addEventListener('keypress',(e) => {
+        //     console.log(`charCode:${String.fromCharCode(e.charCode)}`)
+        //     console.log(`keypress: ${e.key}`)
+        // })
+        // oUserName.addEventListener('keydown',(e) => {
+        //     console.log(`keyCode: ${e.keyCode}`)
+        //     console.log(`keydown: ${e.key}`)
+        // })
+
+        oUserName.addEventListener('keypress',(e)=> {
+            console.log('keypress')
+        });
+
+        oUserName.addEventListener('keydown',(e)=> {
+            console.log('keydown')
+        });  
+        oUserName.addEventListener('keyup',(e)=> {
+            console.log('keyup')
+        }) 
+        oUserName.addEventListener('input',(e)=> {
+            console.log('input')
+        })  
+    </script>
+</body>
+</html>

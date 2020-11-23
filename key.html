@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: gray;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        test
+    </div>
+    <script>
+        const oDiv = document.querySelector('div')
+
+        oDiv.addEventListener('mousedown',(e) => {
+            console.log(`mouse key: ${e.button}`)  // 0 - left, 1 - middle, 2 - right
+            console.log(`是否按下了ctrl键:${e.ctrlKey}`)
+            console.log(`是否按下了shift键:${e.shiftKey}`)
+            console.log(`是否按下了alt键:${e.altKey}`)
+            console.log(`是否按下了meta键盘：${e.metaKey}`)
+            console.log(`同时按下了多个鼠标键${e.buttons}`)   
+        })
+    </script>
+</body>
+</html>

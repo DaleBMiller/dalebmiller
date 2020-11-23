@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+<body>
+    <!-- <script>
+        for(let a in window) {
+            console.log(a)
+        }
+    </script> -->
+
+    <button>click me</button>
+    <script>
+        const myButton = document.querySelector('button')
+        let a = window.open('8.html','打开一个窗口演示')
+
+        myButton.addEventListener('click',(e)=>{
+            // alert('hello! JavaScript!')
+
+            //let msg = confirm('是否真的要删除这条记录')
+
+            //alert(msg)
+
+            // let msg = prompt('请输入你的用户名','admin')
+            // alert(msg)
+            
+            // for(let n in window.navigator) {
+            //     console.log(n)
+            // }
+
+            // console.log(location.href)
+            // console.log(location.protocol)
+            // console.log(location.host)
+            // console.log(location.hostname)
+            // console.log(location.port)
+            // console.log(location.pathname)
+            // console.log(location.search)
+            // console.log(location.hash)
+            //console.log(location.origin)
+            // location.reload(true);
+            //location.assign('8.html')
+            //location.replace('8.html')
+           // alert(location.toString())
+            //location.assign('8.html')
+
+        //    history.go(0)
+        // history.go(-1)
+        //    history.go(1)  // 
+        //    history.back()
+        //    history.forward()
+
+            //var a = window.open('8.html','打开一个窗口演示')
+            a.moveTo(100,200)
+           // a.close()
+        })
+    </script>
+</body>
+</html>

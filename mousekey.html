@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>test</div>
+    <script>
+        const oDiv = document.querySelector('div');
+
+        oDiv.addEventListener('mousedown',(e)=>{
+            console.log(`按钮：${e.button}`) // 0 left, 1 mid, 2 right
+            console.log(`几个按钮：${e.buttons}`) 
+            console.log(`是否按了Ctrl：${e.ctrlKey}`)
+            console.log(`是否按了ALT：${e.altKey}`)
+            console.log(`是否按了SHIFT：${e.shiftKey}`)
+            console.log(`是否按了Meta：${e.metaKey}`)
+        })
+    </script>
+</body>
+</html>
