@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定时器</title>
+</head>
+
+<body>
+    <script>
+        const callback = function () {
+            console.log('Hello ,timeout')
+        }
+        let a = setTimeout(callback, 3000) //window下的一个方法 ,异步执行的典型，实现类似多线程的效果
+        console.log('同步执行')
+        console.log(a)
+        clearTimeout(a)
+
+        //时间间隔
+        let b = setInterval(callback, 3000);
+    </script>
+</body>
+
+</html>
